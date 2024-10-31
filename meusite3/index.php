@@ -87,6 +87,18 @@ function ehPar($num) {
     }
 }
 
+// Tratamento de erros
+function dividir($a, $b) {
+    try {
+        $res =  $a / $b;
+        echo "$a / $b = $res";
+    } catch (DivisionByZeroError $e) {
+        echo "Não pode dividir por zero!";
+    } catch (TypeError $e) {
+        echo "Somente números!";
+    }
+}
+
 
 ?>
 
@@ -103,5 +115,9 @@ function ehPar($num) {
 
     <p>
         <?php echo ehPar(100); ?>
+    </p>
+
+    <p>
+        <?php dividir(5, "asdasd"); ?>
     </p>
 </div>
