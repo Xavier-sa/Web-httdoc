@@ -27,6 +27,8 @@ class Database {
 
         $this->conn = new PDO($connUrl, $this->username, $this->password);
 
+        return $this->conn;
+
 
 
     }
@@ -35,4 +37,10 @@ class Database {
 
 
 }
+
+
+
+
+
+
 ?>
